@@ -17,6 +17,8 @@ bool grabbedKey = false;
 bool grabbedSword = false;
 bool defeatedDragon = false;
 
+Room *room0_1;
+Room *room0_2;
 Room *room1_1;
 Room *room1_2;
 Room *room1_3;
@@ -71,26 +73,30 @@ void connectRooms(Room* r1, Room* r2, enum Direction d) {
 Room *createDungeon()
 {
     Room *startingRoom = createRoom("The entrance to the dungeon.", false, false, false, false);
+    room0_1 = createRoom("A wizard's laboratory, full of old tomes and scrolls.", false, false, false, false);
+    room0_2 = createRoom("The wizard's chambers. Where could they be?", false, false, false, false);
     room1_1 = createRoom("A musty hallway.", false, false, false, false);
     room1_2 = createRoom("Chambers.", false, false, false, false);
-    room1_3 = createRoom("Another Hallway.", false, false, false, false);
+    room1_3 = createRoom("Another hallway.", false, false, false, false);
     room1_4 = createRoom("A damp wall. You see two paths.", false, false, false, false);
     room1_5 = createRoom("A former latrine.", false, false, false, false);
     room1_6 = createRoom("A dead end.", true, false, false, false);
     room2_1 = createRoom("A narrow passageway.", false, false, false, false);
     room2_2 = createRoom("An opening. You see rooms in all directions", false, false, false, false);
-    room2_3 = createRoom("Steps.  You wonder where they lead . . .", false, false, false, false);
-    room2_4 = createRoom("An old broken bridge.  You'll neve be able to cross it", false, false, false, false);
-    room2_5 = createRoom("A solid oak door stands before you", false, false, true, false);
+    room2_3 = createRoom("Steps. You wonder where they lead . . .", false, false, false, false);
+    room2_4 = createRoom("An old broken bridge.  You'll never be able to cross it", false, false, false, false);
+    room2_5 = createRoom("A nondescript room. A solid oak door stands before you", false, false, true, false);
     room3_1 = createRoom("A festering rats nest", false, false, false, false);
-    room3_2 = createRoom("An old armoury.  You see something sharp in the corner.", false, true, false, false);
+    room3_2 = createRoom("An old armoury. You see something sharp in the corner.", false, true, false, false);
     room4_1 = createRoom("Another hallway. You're getting sick of these.", false, false, false, false);
     room4_2 = createRoom("An unlocked door stands before you.  It's getting really warm.", false, false, false, false);
     room4_3 = createRoom("The dragon's lair. I hope you are prepared!", false, false, false, true);
-    room4_4 = createRoom("Another latrine? Control Yourselves . . .", false, false, false, false);
+    room4_4 = createRoom("Another latrine? Control yourselves . . .", false, false, false, false);
 
     // Add Bidirectional Travel
     connectRooms(startingRoom, room1_1, North);
+    connectRooms(startingRoom, room0_1, South);
+    connectRooms(room0_1, room0_2, East);
     connectRooms(room1_1, room1_2, North);
     connectRooms(room2_2, room2_3, North);
     connectRooms(room2_3, room2_4, North);
