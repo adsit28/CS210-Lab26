@@ -14,6 +14,7 @@
 int main() {
 
     Room* dungeon = createDungeon();
+    printf("%s\n", dungeon->description);
 
     // When You Know Where the Key Is, Call This Function and Give It the Path
     //getKey(dungeon->);
