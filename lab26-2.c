@@ -25,7 +25,8 @@ int main() {
     // When You Know Where the Door Is, Call This Function and Give It the Path
     //openDoor(dungeon->);
 
-    // When You Know Where the Door Is, Call This Function and Give It the Path
+    // When You Know Where the Dragon Is, Call This Function and Give It the Path
+    // Note: You must have done the first 3 tasks above to find the dragon
     //attackDragon(dungeon->);
 
     return 0;
