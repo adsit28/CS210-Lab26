@@ -10,10 +10,10 @@
 				"lab26-1.c",
 				"-lm",
 				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}"
+				"lab26-1"
 			],
 			"options": {
-				"cwd": "${fileDirname}"
+			//	"cwd": "${fileDirname}"
 			},
 			"problemMatcher": [
 				"$gcc"

@@ -3,7 +3,7 @@
 * Name: CS210
 * Section:
 * Project: Lab 26
-* Purpose: More fun with structs
+* Purpose: (Optional) More fun with structs
 * ===========================================================
 */
 
