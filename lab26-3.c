@@ -12,6 +12,15 @@
 #include "lab26functs.h"
 
 int main() {
+    int lines = getNumLines("lab26Data.csv");
+    
+    USAFBaseData* baseData = NULL;
+
+    baseData = (USAFBaseData*)malloc(lines*sizeof(USAFBaseData));
+
+    readFile("lab26Data.csv", baseData, lines);
+
+    printData(baseData, lines);
 
     return 0;
 
